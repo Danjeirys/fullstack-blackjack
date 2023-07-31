@@ -1,6 +1,7 @@
 
 
 export default function shuffleDeck () {
+    let deck 
     for (let i = 0; i < deck.length; i++) {
         let j = Math.floor(Math.random() * deck.length) 
         let temp = deck[i] // to swap em

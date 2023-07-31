@@ -1,3 +1,5 @@
+import buildDeck from '../BuildDeck/buildDeck';
+import shuffleDeck from '../ShuffleDeck/shuffleDeck';
 
 
 export default function startGame () {
@@ -34,4 +36,7 @@ export default function startGame () {
     document.getElementById ('stay').addEventListener ('click', stay) // calls on the stay function letting the user end their turn with current total sum
     document.getElementById ('restart').addEventListener ('click', resetGame)
     // document.getElementById ('life').addEventListener ('click', betLife)
+
+    buildDeck(),
+    shuffleDeck()
 }
