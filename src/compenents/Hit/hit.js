@@ -1,4 +1,11 @@
+import getValue from '../GetValue/getValue';
+import checkAce from '../CheckAce/checkAce';
+import reduceAce from '../ReduceAce/reduceAce';
 
+let yourSum = 0
+let yourAceCount = 0
+let deck
+let canHit = true // allows the the user to draw/hit while the user total sum is <= 21
 
 export default function hit () {
     if (!canHit) {

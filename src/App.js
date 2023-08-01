@@ -2,6 +2,11 @@ import "./App.css";
 import back from './Cards/BACK.png'
 import startGame from "./compenents/StartGame/startGame";
 
+const images = require.context('./Cards', true);
+const cardList = images.keys().map(image => images(image));
+
+
+
 
 function App() {
   return (
@@ -19,7 +24,11 @@ function App() {
         <img id="hide" src={back} alt="back" /> 
       </div>
 
-      <div id="user-cards"></div>
+      <div id="user-cards">
+        {cardList.map(( image, index) => (
+          <img key={index} src={image.default} alt={`image-${index}`}/>
+        ))}
+      </div>
 
       <br></br>
 

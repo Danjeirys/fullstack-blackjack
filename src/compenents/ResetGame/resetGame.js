@@ -1,3 +1,15 @@
+import getValue from '../GetValue/getValue';
+import checkAce from '../CheckAce/checkAce';
+
+
+let dealerSum = 0
+let yourSum = 0
+
+let dealerAceCount = 0
+let yourAceCount = 0 // keeps track of how many aces you have to add 10 or add 1 to keep you from busting
+
+let hidden
+let deck
 
 
 export default function resetGame () {

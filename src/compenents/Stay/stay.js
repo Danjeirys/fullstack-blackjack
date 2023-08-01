@@ -1,4 +1,16 @@
+import reduceAce from '../ReduceAce/reduceAce';
 
+let dealerSum = 0
+let yourSum = 0
+let lifeSpan = 150
+let yearsLeft = ''
+
+
+let dealerAceCount = 0
+let yourAceCount = 0 // keeps track of how many aces you have to add 10 or add 1 to keep you from busting
+
+let hidden
+let canHit = true
 
 export default function stay () {
     dealerSum = reduceAce (dealerSum, dealerAceCount)

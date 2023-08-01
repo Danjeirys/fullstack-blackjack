@@ -1,5 +1,27 @@
 import buildDeck from '../BuildDeck/buildDeck';
 import shuffleDeck from '../ShuffleDeck/shuffleDeck';
+import getValue from '../GetValue/getValue';
+import checkAce from '../CheckAce/checkAce';
+import hit from '../Hit/hit';
+import stay from '../Stay/stay';
+import resetGame from '../ResetGame/resetGame'
+// import '../styles.js'
+
+
+let dealerSum = 0
+let yourSum = 0
+let lifeSpan = 150
+let yearsLeft = ''
+
+
+let dealerAceCount = 0
+let yourAceCount = 0 // keeps track of how many aces you have to add 10 or add 1 to keep you from busting
+
+let hidden
+let deck
+
+// let canHit = true // allows the the user to draw/hit while the user total sum is <= 21
+
 
 
 export default function startGame () {
@@ -37,6 +59,6 @@ export default function startGame () {
     document.getElementById ('restart').addEventListener ('click', resetGame)
     // document.getElementById ('life').addEventListener ('click', betLife)
 
-    buildDeck(),
+    buildDeck()
     shuffleDeck()
 }
