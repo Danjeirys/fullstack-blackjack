@@ -25,8 +25,8 @@ function App() {
       </div>
 
       <div id="user-cards">
-        {cardList.map(( image, index) => (
-          <img key={index} src={image.default} alt={`image-${index}`}/>
+        {cardList.map(( images, index) => (
+          <img key={index} src={images.default} alt={`image-${index}`}/>
         ))}
       </div>
 
@@ -54,7 +54,7 @@ function App() {
     </div>
   );
 
-  <startGame/>
+  
 }
 
 export default App;
